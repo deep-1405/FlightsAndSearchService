@@ -13,15 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.hasMany(models.Airport, {
         foreignKey: 'cityId'
-      });
+      })
     }
   }
   City.init({
     name: {
-      type: DataTypes.STRING, 
-      allowNull: false,
-      unique: true
-    },
+        type: DataTypes.STRING,
+        allowNull: false,
+        unique: true
+    }
   }, {
     sequelize,
     modelName: 'City',
